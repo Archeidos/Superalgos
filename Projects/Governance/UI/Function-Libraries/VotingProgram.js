@@ -208,7 +208,6 @@ function newGovernanceFunctionLibraryVotingProgram() {
                 if (node.payload.votingProgram === undefined) { return }
 
                 node.payload.votingProgram.votes = node.payload.votingProgram.votes + votes
-                node.payload.tokenPower = node.payload.votingProgram.votes
 
                 if (node.type === 'Voting Program') {
                     node.payload.votingProgram.incomingPower = node.payload.votingProgram.votes - node.payload.votingProgram.ownPower
@@ -558,3 +557,5 @@ function newGovernanceFunctionLibraryVotingProgram() {
         }
     }
 }
+
+exports.newGovernanceFunctionLibraryVotingProgram = newGovernanceFunctionLibraryVotingProgram
